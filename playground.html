@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Kids Playground</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #87ceeb, #fff8e1);
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px;
+    color: white;
+    background-color: #ff6f61;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+    animation: bounce 2s infinite;
+}
+
+/* NAV */
+nav {
+    text-align: center;
+    background-color: #ffb74d;
+    padding: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #333;
+}
+
+/* CARDS */
+section {
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: slideUp 1.5s ease forwards;
+}
+
+/* BUTTON */
+button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #e64a45;
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* BALLOON ANIMATION */
+.balloon {
+    width: 40px;
+    height: 60px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    animation: float 8s infinite ease-in;
+}
+
+.balloon:nth-child(1) { left: 10%; background: #ff4d4d; animation-delay: 0s; }
+.balloon:nth-child(2) { left: 30%; background: #4dd2ff; animation-delay: 2s; }
+.balloon:nth-child(3) { left: 60%; background: #66ff66; animation-delay: 4s; }
+.balloon:nth-child(4) { left: 80%; background: #ffcc00; animation-delay: 6s; }
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-120vh); }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {transform: translateY(50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Floating Balloons -->
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+
+<header>
+    <h1>Happy Kids Playground 🎠</h1>
+    <p>Fun, Safe & Exciting Place for Children</p>
+</header>
+
+<nav>
+    <a href="playground.html">Home</a>
+    <a href="activitie.html">Activities</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<section>
+    <div class="card">
+        <h2>Our Activities</h2>
+        <ul>
+            <li>Slides & Swings</li>
+            <li>Ball Pit</li>
+            <li>Trampoline</li>
+            <li>Creative Workshops</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Book a Birthday Party 🎉</h2>
+        <button onclick="bookParty()">Book Now</button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Happy Kids Playground</p>
+</footer>
+
+<script>
+function bookParty() {
+    alert("🎂 Thank you! We will contact you soon!");
+}
+</script>
+
+</body>
+</html>
